@@ -13,27 +13,37 @@ public class AddBook extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req,
                       HttpServletResponse res) throws IOException {
-        res.getWriter().println("<form action=\"add\" method=\"POST\">\n" +
+        res.getWriter().println("<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "<head>\n" +
+                "  <meta charset=\"UTF-8\">\n" +
+                "  <title>BookShelf</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "  <form action=\"add\" method=\"POST\">\n" +
                 "  <label>ISBN\n" +
-                "  <input id=\"isbn\" type=\"text\">\n" +
+                "  <input name=\"isbn\" type=\"text\">\n" +
                 "  </label>\n" +
                 "  <label>Name\n" +
-                "  <input id=\"name\" type=\"text\">\n" +
+                "  <input name=\"name\" type=\"text\">\n" +
                 "  </label>\n" +
                 "  <label>Price\n" +
-                "  <input id=\"price\" type=\"text\">\n" +
+                "  <input name=\"price\" type=\"text\">\n" +
                 "  </label>\n" +
                 "  <label>Author\n" +
-                "  <input id=\"author\" type=\"text\">\n" +
+                "  <input name=\"author\" type=\"text\">\n" +
                 "  </label>\n" +
                 "  <label>\n" +
-                "  <input type=\"submit\">" +
+                "  <input type=\"submit\">\n" +
                 "  </label>\n" +
-                "</form>");
+                "</form>\n" +
+                "  </form>\n" +
+                "</body>\n" +
+                "</html>");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        resp.getWriter().println(req.getParameter("name"));
     }
 }
