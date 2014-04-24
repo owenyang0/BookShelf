@@ -6,5 +6,8 @@
 </head>
 <body>
 	<h2>Hello world</h2>
+	<form action="index.js">
+	
+	</form>
 </body>
 </html>

@@ -8,6 +8,7 @@ repositories {
 }
 
 dependencies {
+		providedCompile 'javax.servlet:servlet-api:2.5'
     compile('com.google.guava:guava:14.0.1')
     testCompile('junit:junit:4.11'
     )
