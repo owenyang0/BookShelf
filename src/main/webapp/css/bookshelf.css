@@ -1,0 +1,57 @@
+body {
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  padding: 0 20px;
+  width: 940px;
+  margin: 0 auto;
+}
+.container {
+  width: 530px;
+  margin: 0 auto;
+}
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+.header h3 {
+  line-height: 40px;
+  margin-bottom: 0;
+  /*padding-bottom: 20px;*/
+  color: #999;
+}
+.content {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  background-color: #eee;
+  width: 330px;
+  margin: 0 auto 30px;
+}
+.footer {
+  padding-top: 20px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+.control-group {
+  width: 250px;
+  margin: 0 auto;
+}
+.control-label {
+  font-size: 14px;
+}
+.controls input {
+  width: 230px;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  padding: 5px;
+}
+
+.controls .submit {
+  margin-top: 20px;
+  width: 245px;
+}

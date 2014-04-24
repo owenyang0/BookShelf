@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BookShelf</title>
+  <link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="http://localhost:8080/BookShelf/css/bookshelf.css" /> -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h3>BookShelf</h3>
+    </div>
+    <div class="content">
+      <form action="add" method="POST">
+        <div class="control-group">
+          <label class="control-label" for="isbn">ISBN</label>
+          <div class="controls">
+            <input type="text" name="isbn" placeholder="ISBN">
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="name">Name</label>
+          <div class="controls">
+            <input type="text" name="name" placeholder="Name">
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="price">Price</label>
+          <div class="controls">
+            <input type="text" name="price" placeholder="Price">
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="author">Author</label>
+          <div class="controls">
+            <input type="text" name="author" placeholder="Author">
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <input class="submit" type="submit">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="footer">
+      <p>♥ From Song Yang 2014-4-24</p>
+    </div>
+  </div>
+</body>
+
+</html>

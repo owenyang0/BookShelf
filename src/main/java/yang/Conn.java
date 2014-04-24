@@ -25,7 +25,7 @@ public class Conn {
     }
 
     /* 插入数据记录，并输出插入的数据记录数*/
-    public static void insert(int isbn, String name, double price, String author) {
+    public static int insert(int isbn, String name, double price, String author) {
         conn = getConnection(); // 首先要获取连接，即连接到数据库
         String sql = "INSERT INTO BOOK(ISBN, NAME, PRICE, AUTHOR)"
                 + " VALUES (?, ?, ?, ?)";  // 插入数据的sql语句
@@ -39,12 +39,14 @@ public class Conn {
 
             int count = st.executeUpdate();  // 执行插入操作的sql语句，并返回插入数据的个数
 
-            System.out.println("向staff表中插入 " + count + " 条数据"); //输出插入操作的处理结果
+            System.out.println("向 BOOK 表中插入 " + count + " 条数据"); //输出插入操作的处理结果
 
             conn.close();   //关闭数据库连接
+            return count;
 
         } catch (SQLException e) {
             System.out.println("插入数据失败" + e.getMessage());
+            return -1;
         }
     }
 }
