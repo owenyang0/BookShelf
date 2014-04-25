@@ -20,7 +20,9 @@ public class AddBook extends HttpServlet {
                 "  <meta charset=\"UTF-8\">\n" +
                 "  <title>BookShelf</title>\n" +
                 "  <link rel=\"stylesheet\" type=\"text/css\" href=\"css/bookshelf.css\" />\n" +
-                "  <!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"http://localhost:8000/css/bookshelf.css\" /> -->\n" +
+                "  <script src=\"http://libs.baidu.com/jquery/1.9.0/jquery.js\"></script>\n" +
+                "  <script type=\"text/javascript\" src=\"http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js\"></script>\n" +
+                "  <script type=\"text/javascript\" src=\"js/bookshelf.js\"></script>\n" +
                 "</head>\n" +
                 "\n" +
                 "<body>\n" +
@@ -29,7 +31,7 @@ public class AddBook extends HttpServlet {
                 "      <h3>BookShelf</h3>\n" +
                 "    </div>\n" +
                 "    <div class=\"content\">\n" +
-                "      <form action=\"add\" method=\"POST\">\n" +
+                "      <form id=\"book\" action=\"add\" method=\"POST\">\n" +
                 "        <div class=\"control-group\">\n" +
                 "          <label class=\"control-label\" for=\"isbn\">ISBN</label>\n" +
                 "          <div class=\"controls\">\n" +
