@@ -64,7 +64,7 @@ public class AddBook extends HttpServlet {
                 "      </form>\n" +
                 "    </div>\n" +
                 "    <div class=\"footer\">\n" +
-                "      <p>♥ From Song Yang 2014-4-24</p>\n" +
+                "      <p>From Song Yang 2014-4-24</p>\n" +
                 "    </div>\n" +
                 "  </div>\n" +
                 "</body>\n" +
