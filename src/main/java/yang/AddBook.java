@@ -79,7 +79,8 @@ public class AddBook extends HttpServlet {
         double price = Double.parseDouble(req.getParameter("price"));
         String author = req.getParameter("author");
 
-        int count = Conn.insert(isbn, name, price, author);
+//        int count = Conn.insert(isbn, name, price, author);
+        int count = DBCPManager.insert(isbn, name, price, author);
         if(count != -1) {
             resp.getWriter().println("Inserted " + count + " items successed!");
         }
