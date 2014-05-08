@@ -1,7 +1,6 @@
 package yang;
 
 import org.apache.commons.dbcp.BasicDataSource;
-
 import java.sql.*;
 
 public class DBCPManager {

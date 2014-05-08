@@ -13,4 +13,14 @@
         <servlet-name>add-book</servlet-name>
         <url-pattern>/add</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>show-book</servlet-name>
+        <servlet-class>yang.ShowBook</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>show-book</servlet-name>
+        <url-pattern>/show</url-pattern>
+    </servlet-mapping>
 </web-app>
