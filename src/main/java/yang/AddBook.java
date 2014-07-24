@@ -74,7 +74,7 @@ public class AddBook extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int isbn = Integer.parseInt(req.getParameter("isbn"));
+        String isbn = req.getParameter("isbn");
         String name = req.getParameter("name");
         double price = Double.parseDouble(req.getParameter("price"));
         String author = req.getParameter("author");

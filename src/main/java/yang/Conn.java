@@ -16,7 +16,7 @@ public class Conn {
             Class.forName("com.mysql.jdbc.Driver");// 加载Mysql数据驱动
 
             con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/BOOKSHELF", "root", "");// 创建数据连接
+                    "jdbc:mysql://localhost:3306/BOOKSHELF", "yang", "123456");// 创建数据连接
 
         } catch (Exception e) {
             System.out.println("数据库连接失败" + e.getMessage());
@@ -25,14 +25,14 @@ public class Conn {
     }
 
     /* 插入数据记录，并输出插入的数据记录数*/
-    public static int insert(int isbn, String name, double price, String author) {
+    public static int insert(String isbn, String name, double price, String author) {
         conn = getConnection(); // 首先要获取连接，即连接到数据库
         String sql = "INSERT INTO BOOK(ISBN, NAME, PRICE, AUTHOR)"
                 + " VALUES (?, ?, ?, ?)";  // 插入数据的sql语句
         try {
 
             PreparedStatement st = conn.prepareStatement(sql);
-            st.setInt(1, isbn);
+            st.setString(1, isbn);
             st.setString(2, name);
             st.setDouble(3, price);
             st.setString(4, author);

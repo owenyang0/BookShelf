@@ -61,7 +61,7 @@ public class DBCPManager {
         return null;
     }
 
-    public static int insert(int isbn, String name, double price, String author) {
+    public static int insert(String isbn, String name, double price, String author) {
         String sql = "INSERT INTO BOOK(ISBN, NAME, PRICE, AUTHOR)"
                 + " VALUES (?, ?, ?, ?)";  // 插入数据的sql语句
 
@@ -77,7 +77,7 @@ public class DBCPManager {
         try {
             conn = db.getConnection();
             PreparedStatement st = conn.prepareStatement(sql);
-            st.setInt(1, isbn);
+            st.setString(1, isbn);
             st.setString(2, name);
             st.setDouble(3, price);
             st.setString(4, author);
