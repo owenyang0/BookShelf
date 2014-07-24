@@ -2,7 +2,10 @@ package yang;
 
 import com.yang.model.Book;
 import org.apache.commons.dbcp.BasicDataSource;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBCPManager {
 
@@ -32,23 +35,16 @@ public class DBCPManager {
         return instance;
     }
 
-    public void free(ResultSet rs, Statement st, Connection conn) {
+    public void free(ResultSet rs, Connection conn) {
         try {
             if (rs != null) rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             try {
-                if (st != null)
-                    st.close();
+                if (conn != null) conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
-            } finally {
-                try {
-                    if (conn != null) conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
             }
         }
     }
@@ -69,7 +65,6 @@ public class DBCPManager {
         String sql = "INSERT INTO BOOK(ISBN, NAME, PRICE, AUTHOR)"
                 + " VALUES (?, ?, ?, ?)";  // 插入数据的sql语句
 
-        Statement stmt = null;
         ResultSet reset = null;
         DBCPManager db = DBCPManager.getInstance();
         Connection conn = db.getConnection();
@@ -94,7 +89,47 @@ public class DBCPManager {
             e.printStackTrace();
             return -1;
         } finally {
-            db.free(reset, stmt, conn);
+            db.free(reset, conn);
+        }
+    }
+
+
+    public static List<Book> select(String isbn) {
+        String sql = "SELECT * FROM BOOK";
+        ResultSet reset = null;
+
+        DBCPManager db = DBCPManager.getInstance();
+        Connection conn = db.getConnection();
+        List<Book> books = new ArrayList<Book>();
+
+        if (conn == null) {
+            System.out.println("conn==null");
+        }
+
+        if (isbn != "*") {
+            sql += " WHERE ISBN=" + isbn;
+        }
+
+        try {
+            conn = db.getConnection();
+            PreparedStatement st = conn.prepareStatement(sql);
+            reset = st.executeQuery();
+
+            while (reset.next()) {
+                Book book = new Book(reset.getString("isbn"),
+                        reset.getString("name"),
+                        reset.getDouble("price"),
+                        reset.getString("author"));
+                books.add(book);
+            }
+
+            System.out.println("共 [" + books.size() + "] 条数据");
+            return books;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            db.free(reset, conn);
+            return books;
         }
     }
 }
