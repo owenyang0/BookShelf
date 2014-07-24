@@ -1,5 +1,7 @@
 package yang;
 
+import com.yang.model.Book;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -79,8 +81,9 @@ public class AddBook extends HttpServlet {
         double price = Double.parseDouble(req.getParameter("price"));
         String author = req.getParameter("author");
 
-//        int count = Conn.insert(isbn, name, price, author);
-        int count = DBCPManager.insert(isbn, name, price, author);
+        Book book = new Book(isbn, name, price, author);
+
+        int count = DBCPManager.insert(book);
         if(count != -1) {
             resp.getWriter().println("Inserted " + count + " items successed!");
         }
