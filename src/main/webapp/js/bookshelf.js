@@ -4,7 +4,7 @@ $(document).ready(function() {
       isbn: {
         required: true,
         digits: true,
-        maxlength: 9
+        maxlength: 13
       },
       name: {
         required: true
