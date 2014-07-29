@@ -20,9 +20,11 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('default'));
 });
 
+gulp.task('build', ['sass', 'lint']);
+
 var watchFiles = config.files.stylesheets.src.concat(config.files.javascript.src);
 gulp.task('watch', ['sass'], function() {
-  gulp.watch(watchFiles, ['sass', 'lint'])
+  gulp.watch(watchFiles, ['build'])
     .on('change', function(evt) {
       console.log(
         '[watcher] File ' + evt.path + ' was ' + evt.type + ', compiling...'
@@ -30,4 +32,4 @@ gulp.task('watch', ['sass'], function() {
     });
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['build']);
