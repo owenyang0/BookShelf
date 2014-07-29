@@ -18,6 +18,7 @@
   "homepage": "https://github.com/owenyang0/BookShelf",
   "devDependencies": {
     "gulp": "~3.8.6",
-    "gulp-sass": "~0.7.2"
+    "gulp-sass": "~0.7.2",
+    "gulp-jshint": "~1.8.0"
   }
 }
