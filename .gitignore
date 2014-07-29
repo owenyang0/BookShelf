@@ -16,3 +16,6 @@ lib/
 *iml
 *.iws
 build/
+
+# node modules
+node_modules

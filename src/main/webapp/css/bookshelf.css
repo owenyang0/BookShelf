@@ -1,89 +1,75 @@
-/* line 1, ../sass/custom/_main.scss */
+/* line 1, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
 body {
   font-family: "Arial, sans-serif";
   font-size: 14px;
-  background: #eaeaea url("../images/bg.png");
+  background: #eaeaea url('../images/bg.png');
   color: "#4d4d4d";
   line-height: 1.5;
   padding: 0 20px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-/* line 11, ../sass/custom/_main.scss */
+/* line 11, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
 .container {
   width: 530px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-/* line 16, ../sass/custom/_main.scss */
+/* line 16, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
 .header {
   border-bottom: 1px solid #afacac;
-  margin-bottom: 20px;
-}
-/* line 19, ../sass/custom/_main.scss */
-.header h3 {
-  line-height: 40px;
-  margin-bottom: 0;
-  color: #999;
-}
+  margin-bottom: 20px; }
+  /* line 19, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
+  .header h3 {
+    line-height: 40px;
+    margin-bottom: 0;
+    color: #999; }
 
-/* line 26, ../sass/custom/_main.scss */
+/* line 26, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
 .content {
   padding: 30px;
   margin-bottom: 30px;
   font-weight: 200;
   color: "#4d4d4d";
   width: 330px;
-  margin: 0 auto 30px;
-}
-/* line 33, ../sass/custom/_main.scss */
-.content form div {
-  padding-bottom: 3px;
-}
+  margin: 0 auto 30px; }
+  /* line 33, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
+  .content form div {
+    padding-bottom: 3px; }
 
-/* line 39, ../sass/custom/_main.scss */
+/* line 39, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
 input[type=submit]:hover {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 44, ../sass/custom/_main.scss */
+/* line 44, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
 input.error {
-  border: 1px dashed red;
-}
+  border: 1px dashed red; }
 
-/* line 48, ../sass/custom/_main.scss */
+/* line 48, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
 label.error {
   color: red;
-  font-style: italic;
-}
+  font-style: italic; }
 
-/* line 53, ../sass/custom/_main.scss */
+/* line 53, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
 .footer {
   padding-top: 20px;
   color: #777;
-  border-top: 1px solid #afacac;
-}
+  border-top: 1px solid #afacac; }
 
-/* line 59, ../sass/custom/_main.scss */
+/* line 59, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
 .control-group {
   width: 250px;
-  margin: 0 auto;
-}
-/* line 62, ../sass/custom/_main.scss */
-.control-group .control-label {
-  font-size: 14px;
-}
-/* line 66, ../sass/custom/_main.scss */
-.control-group .controls input {
-  width: 230px;
-  line-height: 20px;
-  border-radius: 5px;
-  color: "#4d4d4d";
-  border: 1px solid #afacac;
-  padding: 5px;
-}
-/* line 74, ../sass/custom/_main.scss */
-.control-group .controls .submit {
-  margin-top: 20px;
-  width: 245px;
-}
+  margin: 0 auto; }
+  /* line 62, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
+  .control-group .control-label {
+    font-size: 14px; }
+  /* line 66, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
+  .control-group .controls input {
+    width: 230px;
+    line-height: 20px;
+    border-radius: 5px;
+    color: "#4d4d4d";
+    border: 1px solid #afacac;
+    padding: 5px; }
+  /* line 74, /Users/songyang/code/github/BookShelf/src/main/webapp/sass/custom/_main */
+  .control-group .controls .submit {
+    margin-top: 20px;
+    width: 245px; }

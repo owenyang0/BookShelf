@@ -1,0 +1,13 @@
+{
+  "files": {
+    "stylesheets": {
+      "main": [
+        "src/main/webapp/sass/bookshelf.scss"
+      ],
+      "src": [
+        "src/main/webapp/sass/{,**/}**.scss"
+      ],
+      "dest": "src/main/webapp/css/"
+    }
+  }
+}
