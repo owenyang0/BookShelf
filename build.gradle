@@ -13,6 +13,8 @@ dependencies {
     compile('org.springframework:spring-webmvc:4.0.0.RELEASE')
     compile('commons-dbcp:commons-dbcp:1.4')
     testCompile('junit:junit:4.11')
+
+    runtime('javax.servlet:jstl:1.2')
 }
 
 compileJava {
