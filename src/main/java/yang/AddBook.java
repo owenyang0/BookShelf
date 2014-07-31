@@ -21,10 +21,10 @@ public class AddBook extends HttpServlet {
                 "<head>\n" +
                 "  <meta charset=\"UTF-8\">\n" +
                 "  <title>BookShelf</title>\n" +
-                "  <link rel=\"stylesheet\" type=\"text/css\" href=\"css/bookshelf.css\" />\n" +
+                "  <link rel=\"stylesheet\" type=\"text/css\" href=\"dest/css/bookshelf.css\" />\n" +
                 "  <script src=\"http://libs.baidu.com/jquery/1.9.0/jquery.js\"></script>\n" +
                 "  <script type=\"text/javascript\" src=\"http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js\"></script>\n" +
-                "  <script type=\"text/javascript\" src=\"js/bookshelf.js\"></script>\n" +
+                "  <script type=\"text/javascript\" src=\"dest/js/bookshelf.min.js\"></script>\n" +
                 "</head>\n" +
                 "\n" +
                 "<body>\n" +

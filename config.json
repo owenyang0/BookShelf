@@ -7,13 +7,14 @@
       "src": [
         "src/main/webapp/sass/{,**/}**.scss"
       ],
-      "dest": "src/main/webapp/css/"
+      "dest": "src/main/webapp/dest/css/"
     },
     "javascript": {
       "src": [
         "src/main/webapp/js/{,**/}**.js"
       ],
-      "dest": "src/main/webapp/js/mini/"
+      "dest": "src/main/webapp/dest/js/",
+      "destfile": "bookshelf.min.js"
     }
   }
 }
