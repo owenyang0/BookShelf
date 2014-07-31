@@ -10,7 +10,7 @@
     <context:component-scan base-package="com.yang.controller" />
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="prefix" value="/WEB-INF/views/books/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 

@@ -11,7 +11,7 @@
 
     <servlet-mapping>
         <servlet-name>add-book</servlet-name>
-        <url-pattern>/add</url-pattern>
+        <url-pattern>/books/add</url-pattern>
     </servlet-mapping>
 
     <servlet>

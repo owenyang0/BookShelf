@@ -1,15 +1,16 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=utf8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>BookShelf</title>
-  <link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
+  <link rel="stylesheet" type="text/css" href="/BookShelf/dest/css/bookshelf.css" />
   <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
-  <script type="text/javascript" src="js/bookshelf.js"></script>
+  <script type="text/javascript" src="/BookShelf/dest/js/bookshelf.min.js"></script>
 </head>
-
 <body>
   <div class="container">
     <div class="header">
@@ -53,5 +54,4 @@
     </div>
   </div>
 </body>
-
 </html>

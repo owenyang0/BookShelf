@@ -14,64 +14,65 @@ import java.io.IOException;
 public class AddBook extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req,
-                      HttpServletResponse res) throws IOException {
-        res.getWriter().println("<!DOCTYPE html>\n" +
-                "<html lang=\"en\">\n" +
-                "\n" +
-                "<head>\n" +
-                "  <meta charset=\"UTF-8\">\n" +
-                "  <title>BookShelf</title>\n" +
-                "  <link rel=\"stylesheet\" type=\"text/css\" href=\"dest/css/bookshelf.css\" />\n" +
-                "  <script src=\"http://libs.baidu.com/jquery/1.9.0/jquery.js\"></script>\n" +
-                "  <script type=\"text/javascript\" src=\"http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js\"></script>\n" +
-                "  <script type=\"text/javascript\" src=\"dest/js/bookshelf.min.js\"></script>\n" +
-                "</head>\n" +
-                "\n" +
-                "<body>\n" +
-                "  <div class=\"container\">\n" +
-                "    <div class=\"header\">\n" +
-                "      <h3>BookShelf</h3>\n" +
-                "    </div>\n" +
-                "    <div class=\"content\">\n" +
-                "      <form id=\"book\" action=\"add\" method=\"POST\">\n" +
-                "        <div class=\"control-group\">\n" +
-                "          <label class=\"control-label\" for=\"isbn\">ISBN</label>\n" +
-                "          <div class=\"controls\">\n" +
-                "            <input type=\"text\" name=\"isbn\" placeholder=\"ISBN\">\n" +
-                "          </div>\n" +
-                "        </div>\n" +
-                "        <div class=\"control-group\">\n" +
-                "          <label class=\"control-label\" for=\"name\">Name</label>\n" +
-                "          <div class=\"controls\">\n" +
-                "            <input type=\"text\" name=\"name\" placeholder=\"Name\">\n" +
-                "          </div>\n" +
-                "        </div>\n" +
-                "        <div class=\"control-group\">\n" +
-                "          <label class=\"control-label\" for=\"price\">Price</label>\n" +
-                "          <div class=\"controls\">\n" +
-                "            <input type=\"text\" name=\"price\" placeholder=\"Price\">\n" +
-                "          </div>\n" +
-                "        </div>\n" +
-                "        <div class=\"control-group\">\n" +
-                "          <label class=\"control-label\" for=\"author\">Author</label>\n" +
-                "          <div class=\"controls\">\n" +
-                "            <input type=\"text\" name=\"author\" placeholder=\"Author\">\n" +
-                "          </div>\n" +
-                "        </div>\n" +
-                "        <div class=\"control-group\">\n" +
-                "          <div class=\"controls\">\n" +
-                "            <input class=\"submit\" type=\"submit\">\n" +
-                "          </div>\n" +
-                "        </div>\n" +
-                "      </form>\n" +
-                "    </div>\n" +
-                "    <div class=\"footer\">\n" +
-                "      <p>From Song Yang 2014-4-24</p>\n" +
-                "    </div>\n" +
-                "  </div>\n" +
-                "</body>\n" +
-                "\n" +
-                "</html>\n");
+                      HttpServletResponse res) throws IOException, ServletException {
+//        res.getWriter().println("<!DOCTYPE html>\n" +
+//                "<html lang=\"en\">\n" +
+//                "\n" +
+//                "<head>\n" +
+//                "  <meta charset=\"UTF-8\">\n" +
+//                "  <title>BookShelf</title>\n" +
+//                "  <link rel=\"stylesheet\" type=\"text/css\" href=\"dest/css/bookshelf.css\" />\n" +
+//                "  <script src=\"http://libs.baidu.com/jquery/1.9.0/jquery.js\"></script>\n" +
+//                "  <script type=\"text/javascript\" src=\"http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js\"></script>\n" +
+//                "  <script type=\"text/javascript\" src=\"dest/js/bookshelf.min.js\"></script>\n" +
+//                "</head>\n" +
+//                "\n" +
+//                "<body>\n" +
+//                "  <div class=\"container\">\n" +
+//                "    <div class=\"header\">\n" +
+//                "      <h3>BookShelf</h3>\n" +
+//                "    </div>\n" +
+//                "    <div class=\"content\">\n" +
+//                "      <form id=\"book\" action=\"add\" method=\"POST\">\n" +
+//                "        <div class=\"control-group\">\n" +
+//                "          <label class=\"control-label\" for=\"isbn\">ISBN</label>\n" +
+//                "          <div class=\"controls\">\n" +
+//                "            <input type=\"text\" name=\"isbn\" placeholder=\"ISBN\">\n" +
+//                "          </div>\n" +
+//                "        </div>\n" +
+//                "        <div class=\"control-group\">\n" +
+//                "          <label class=\"control-label\" for=\"name\">Name</label>\n" +
+//                "          <div class=\"controls\">\n" +
+//                "            <input type=\"text\" name=\"name\" placeholder=\"Name\">\n" +
+//                "          </div>\n" +
+//                "        </div>\n" +
+//                "        <div class=\"control-group\">\n" +
+//                "          <label class=\"control-label\" for=\"price\">Price</label>\n" +
+//                "          <div class=\"controls\">\n" +
+//                "            <input type=\"text\" name=\"price\" placeholder=\"Price\">\n" +
+//                "          </div>\n" +
+//                "        </div>\n" +
+//                "        <div class=\"control-group\">\n" +
+//                "          <label class=\"control-label\" for=\"author\">Author</label>\n" +
+//                "          <div class=\"controls\">\n" +
+//                "            <input type=\"text\" name=\"author\" placeholder=\"Author\">\n" +
+//                "          </div>\n" +
+//                "        </div>\n" +
+//                "        <div class=\"control-group\">\n" +
+//                "          <div class=\"controls\">\n" +
+//                "            <input class=\"submit\" type=\"submit\">\n" +
+//                "          </div>\n" +
+//                "        </div>\n" +
+//                "      </form>\n" +
+//                "    </div>\n" +
+//                "    <div class=\"footer\">\n" +
+//                "      <p>From Song Yang 2014-4-24</p>\n" +
+//                "    </div>\n" +
+//                "  </div>\n" +
+//                "</body>\n" +
+//                "\n" +
+//                "</html>\n");
+        req.getRequestDispatcher("/WEB-INF/views/books/add.jsp").forward(req, res);
     }
 
     @Override
