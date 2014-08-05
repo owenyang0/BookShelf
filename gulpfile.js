@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglifyjs');
 var jshint = require('gulp-jshint');
+var imagemin = require('gulp-imagemin');
 
 var config = require('./config.json');
 
@@ -29,9 +30,21 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('build', ['sass', 'lint', 'uglify']);
+var imagefiles = config.files.images;
+gulp.task('images', function() {
+  return gulp.src(imagefiles.src)
+    .pipe(imagemin({
+      progressive: true
+    }))
+    .pipe(gulp.dest(imagefiles.dest));
+});
 
-var watchFiles = config.files.stylesheets.src.concat(config.files.javascript.src);
+gulp.task('build', ['sass', 'lint', 'uglify', 'images']);
+
+var watchFiles = config.files.stylesheets.src.concat(
+    config.files.javascript.src,
+    imagefiles.src);
+
 gulp.task('watch', ['build'], function() {
   gulp.watch(watchFiles, ['build'])
     .on('change', function(evt) {
@@ -42,3 +55,7 @@ gulp.task('watch', ['build'], function() {
 });
 
 gulp.task('default', ['build']);
+
+gulp.task('test', function() {
+  console.log(watchFiles);
+})

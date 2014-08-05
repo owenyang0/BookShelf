@@ -19,3 +19,6 @@ build/
 
 # node modules
 node_modules
+
+# dest directory
+src/main/webapp/dest/

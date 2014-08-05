@@ -15,6 +15,12 @@
       ],
       "dest": "src/main/webapp/dest/js/",
       "destfile": "bookshelf.min.js"
+    },
+    "images": {
+      "src": [
+        "src/main/webapp/images/{,**/}**.*"
+      ],
+      "dest": "src/main/webapp/dest/images/"
     }
   }
 }
