@@ -4,7 +4,6 @@
     <head>
         <title>All the books</title>
             <link href="../dest/css/bookshelf.css" rel="stylesheet">
-            <link href="../dest/css/bootstrap/bootstrap.css" rel="stylesheet">
     </head>
 <body>
 <div class="container">
