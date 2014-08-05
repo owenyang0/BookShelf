@@ -21,4 +21,4 @@ build/
 node_modules
 
 # dest directory
-src/main/webapp/dest/
+src/main/webapp/dest/*

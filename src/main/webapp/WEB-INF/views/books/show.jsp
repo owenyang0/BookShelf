@@ -3,11 +3,14 @@
 <html>
     <head>
         <title>All the books</title>
-            <link href="../css/bookshelf.css" rel="stylesheet">
-            <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.css" rel="stylesheet">
+            <link href="../dest/css/bookshelf.css" rel="stylesheet">
+            <link href="../dest/css/bootstrap/bootstrap.css" rel="stylesheet">
     </head>
 <body>
 <div class="container">
+  <div class="header">
+      <h3>BookShelf</h3>
+    </div>
     <nav class="navbar navbar-default" role="navigation">
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -37,6 +40,10 @@
         </tr>
     </c:forEach>
     </table>
+        <div class="footer">
+          <p>From Song Yang 2014-4-24</p>
+        </div>
 </div>
+
 </body>
 </html>

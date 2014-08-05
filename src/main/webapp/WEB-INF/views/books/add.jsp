@@ -12,7 +12,7 @@
   <script type="text/javascript" src="/BookShelf/dest/js/bookshelf.min.js"></script>
 </head>
 <body>
-  <div class="container">
+  <div class="book-container">
     <div class="header">
       <h3>BookShelf</h3>
     </div>
