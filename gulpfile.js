@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglifyjs');
 var jshint = require('gulp-jshint');
 var imagemin = require('gulp-imagemin');
+var gutil = require('gulp-util');
 
 var config = require('./config.json');
 
@@ -48,9 +49,7 @@ var watchFiles = config.files.stylesheets.src.concat(
 gulp.task('watch', ['build'], function() {
   gulp.watch(watchFiles, ['build'])
     .on('change', function(evt) {
-      console.log(
-        '[watcher] File ' + evt.path + ' was ' + evt.type + ', compiling...'
-      );
+      gutil.log(gutil.colors.red('File changed '), evt.path);
     });
 });
 
