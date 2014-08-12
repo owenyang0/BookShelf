@@ -23,8 +23,8 @@ public class BookService {
         return dao.addBook(book);
     }
 
-    public boolean deleteBookById(int id){
-        return dao.deleteBookById(id);
+    public boolean deleteBookByIsbn(int isbn){
+        return dao.deleteBookByIsbn(isbn);
     }
 
     public List<Book> getBooks(){
