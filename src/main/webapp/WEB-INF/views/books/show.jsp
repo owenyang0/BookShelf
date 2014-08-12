@@ -19,7 +19,8 @@
           <div class="form-group">
             <input type="text" name="bookname" class="form-control" placeholder="Search">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Search</button>
+          <a type="button" class="btn btn-info" href="/BookShelf/books/add">Add</a>
         </form>
       </div>
     </nav>
