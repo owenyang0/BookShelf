@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>All the books</title>
-            <link href="../dest/css/bookshelf.css" rel="stylesheet">
+        <link href="/BookShelf/dest/css/bookshelf.css" rel="stylesheet">
     </head>
 <body>
 <div class="container">
@@ -13,7 +13,7 @@
     <nav class="navbar navbar-default" role="navigation">
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="show">All the books</a></li>
+          <li class="active"><a href="/BookShelf/books/show">All the books</a></li>
         </ul>
         <form class="navbar-form navbar-right" role="search" method="GET">
           <div class="form-group">
@@ -23,7 +23,7 @@
         </form>
       </div>
     </nav>
-    <table class="table table-hover">
+    <table class="table table-hover book-table">
         <tr>
           <th>ISBN</th>
           <th>Name</th>
@@ -36,6 +36,7 @@
           <td>${book.name}</td>
           <td>${book.price}</td>
           <td>${book.author}</td>
+          <td width="80"><a class="btn btn-danger book-delete" href="/BookShelf/books/delete/${book.isbn}">Delete</a></td>
         </tr>
     </c:forEach>
     </table>

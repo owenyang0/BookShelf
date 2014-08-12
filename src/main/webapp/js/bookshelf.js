@@ -30,4 +30,10 @@ $(function() {
       author: "please enter a book's author name"
     }
   });
+
+  $('.book-delete').on('click', function() {
+    var isbn = $($('.book-delete').parents('tr').find('td').get(0)).text();
+    $(location).path('/delete/' + isbn);
+    console.log($(this));
+  });
 });

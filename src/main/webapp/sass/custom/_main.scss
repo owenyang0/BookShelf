@@ -77,3 +77,11 @@ label.error {
     }
   }
 }
+
+.book-delete {
+  display: none;
+  // width: 80px;
+}
+tr:hover {
+  .book-delete { display: inline; }
+}
