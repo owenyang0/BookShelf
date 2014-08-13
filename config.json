@@ -11,7 +11,7 @@
     },
     "javascript": {
       "src": [
-        "src/main/webapp/js/{,**/}**.js"
+        "src/main/webapp/js/*.js"
       ],
       "dest": "src/main/webapp/dest/js/",
       "destfile": "bookshelf.min.js"
