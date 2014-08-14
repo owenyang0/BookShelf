@@ -36,4 +36,7 @@ $(function() {
     $(location).path('/delete/' + isbn);
     console.log($(this));
   });
+  $('.book-nav').on('click', 'li', function() {
+    $(this).css('active');
+  });
 });

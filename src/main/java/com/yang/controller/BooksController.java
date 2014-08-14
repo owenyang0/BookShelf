@@ -18,12 +18,31 @@ import java.util.List;
 @Controller
 @RequestMapping("books")
 public class BooksController {
+    public static final String PAPER_TYPE = "paper";
+    public static final String ELECTRIC_TYPE = "electric";
     @Autowired
     BookService service;
+
 
     @RequestMapping(value = "/show", method = RequestMethod.GET)
     public String showBooks(Model model) {
         model.addAttribute("books", service.getBooks());
+        System.out.println(model);
+        return "show";
+    }
+
+    @RequestMapping(value = "/show/paper", method = RequestMethod.GET)
+    public String showPaperBooks(Model model) {
+        model.addAttribute("books", service.getPaperBooks());
+        model.addAttribute("type", PAPER_TYPE);
+        System.out.println(model);
+        return "show";
+    }
+
+    @RequestMapping(value = "/show/electric", method = RequestMethod.GET)
+    public String showElectricBooks(Model model) {
+        model.addAttribute("books", service.getElectricBook());
+        model.addAttribute("type", ELECTRIC_TYPE);
         System.out.println(model);
         return "show";
     }

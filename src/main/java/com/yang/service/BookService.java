@@ -2,6 +2,8 @@ package com.yang.service;
 
 import com.yang.dao.BookDao;
 import com.yang.model.Book;
+import com.yang.model.ElectricBook;
+import com.yang.model.PaperBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +35,13 @@ public class BookService {
 
     public void setDao(BookDao dao) {
         this.dao = dao;
+    }
+
+    public List<PaperBook> getPaperBooks() {
+        return dao.getPaperBooks();
+    }
+
+    public List<ElectricBook> getElectricBook() {
+        return dao.getElectricBooks();
     }
 }

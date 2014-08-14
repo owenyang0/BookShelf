@@ -17,9 +17,9 @@ import static com.google.common.collect.Lists.newArrayList;
 public class BookDao {
     private List<Book> books = newArrayList(new PaperBook("876543212", "CLEAN CODE", 87.88, "YANG SONG", 654),
             new PaperBook("876583212", "GUIDE LINE", 66.28, "FANG", 64),
-            new ElectricBook("11134134", "HOT GIRLS", 32.46, "TEST", "download link"),
+            new ElectricBook("11134134", "HOT GIRLS", 32.46, "TEST", "http://baidu.com"),
             new PaperBook("831241324", "Servlet Head First", 22.34, "MARK", 222),
-            new ElectricBook("11134134134", "HOBBIT", 34.56, "Charles", "download link")
+            new ElectricBook("11134134134", "HOBBIT", 34.56, "Charles", "http://google.com")
     );
 
     public List<Book> getBooksByName(String bookname) {
@@ -56,5 +56,26 @@ public class BookDao {
 
     public List<Book> getBooks() {
         return books;
+    }
+
+    public List<PaperBook> getPaperBooks() {
+        ArrayList<PaperBook> paperBooks = new ArrayList<>();
+        for (Book book: books) {
+            if(book instanceof PaperBook) {
+                paperBooks.add((PaperBook)book);
+            }
+        }
+        return paperBooks;
+    }
+
+    public List<ElectricBook> getElectricBooks() {
+        ArrayList<ElectricBook> electricBooks = new ArrayList<>();
+        for (Book book: books) {
+            if(book instanceof ElectricBook) {
+                electricBooks.add((ElectricBook) book);
+            }
+        }
+        return electricBooks;
+
     }
 }
