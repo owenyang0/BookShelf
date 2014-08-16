@@ -27,9 +27,9 @@ public class BookDaoTest {
         BookDao bookDao = new BookDao();
         Book book = new PaperBook("8314324", "NODE JS", 202.34, "JACK", 242);
 
-        int originalSize = bookDao.getBooks().size();
+        int originalSize = bookDao.count();
         bookDao.addBook(book);
-        int currentSize = bookDao.getBooks().size();
+        int currentSize = bookDao.count();
 
         assertThat(currentSize, is(originalSize + 1));
     }
@@ -37,8 +37,9 @@ public class BookDaoTest {
     @Test
     public void should_delete_success_when_given_isbn() throws Exception {
         BookDao bookDao = new BookDao();
+        bookDao.addBook(new PaperBook("8314324", "NODE JS", 202.34, "JACK", 242));
 
-        assertThat(bookDao.deleteBookByIsbn(11134134), is(true));
+        assertThat(bookDao.deleteBookByIsbn(8314324), is(true));
     }
 
     @Test

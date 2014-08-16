@@ -60,7 +60,7 @@
     </c:forEach>
     </table>
         <div class="footer">
-          <p>From Song Yang 2014-4-24</p>
+          <p>From Song Yang 2014-8-10</p>
         </div>
 </div>
 

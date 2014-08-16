@@ -78,4 +78,8 @@ public class BookDao {
         return electricBooks;
 
     }
+
+    public int count() {
+        return this.books.size();
+    }
 }
