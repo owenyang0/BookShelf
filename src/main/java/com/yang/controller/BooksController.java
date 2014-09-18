@@ -28,7 +28,7 @@ public class BooksController {
     public String showBooks(Model model) {
         model.addAttribute("books", service.getBooks());
         System.out.println(model);
-        return "show";
+        return "books/show";
     }
 
     @RequestMapping(value = "/show/paper", method = RequestMethod.GET)
@@ -36,7 +36,7 @@ public class BooksController {
         model.addAttribute("books", service.getPaperBooks());
         model.addAttribute("type", PAPER_TYPE);
         System.out.println(model);
-        return "show";
+        return "books/show";
     }
 
     @RequestMapping(value = "/show/electric", method = RequestMethod.GET)
@@ -44,7 +44,7 @@ public class BooksController {
         model.addAttribute("books", service.getElectricBook());
         model.addAttribute("type", ELECTRIC_TYPE);
         System.out.println(model);
-        return "show";
+        return "books/show";
     }
 
     @RequestMapping(value = "/show", params = "bookname", method = RequestMethod.GET)
@@ -52,7 +52,7 @@ public class BooksController {
         List<Book> books = service.searchBooksByName(bookName);
         model.addAttribute("books", books);
         System.out.println(model);
-        return "show";
+        return "books/show";
     }
 
     @RequestMapping(value = "/delete/{isbn}", method = RequestMethod.GET)
@@ -60,7 +60,7 @@ public class BooksController {
         service.deleteBookByIsbn(isbn);
         model.addAttribute("books", service.getBooks());
         System.out.println(model);
-        return "show";
+        return "books/show";
     }
 
 }
